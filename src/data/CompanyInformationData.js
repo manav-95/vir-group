@@ -2,7 +2,7 @@ const companyInfo = [
     {
         id: 1,
         officeType: 'Registered Office & Corporate Office',
-        companyName: 'JKD Engineers & Infrastructure Pvt Ltd.',
+        companyName: 'VIR GROUP',
         unitNo: `B- 605, Express Zone,`,
         landmark: `OPP Oberoi Mall, Western Express Highway,`,
         location: `Malad East, Mumbai - 400 097`,
