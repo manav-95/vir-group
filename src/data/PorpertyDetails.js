@@ -1,0 +1,190 @@
+// PROJECT IMAGES
+import Vir_Enclave from '../assets/property-details/vir-enclave-day.jpg'
+import Global_Residency from '../assets/property-details/global-residency.jpeg'
+import Krishna_Koyna from '../assets/property-details/krishna-koyna-day.jpg'
+
+// ICONS
+import { IoMdMail } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
+
+const propertyDetails = [
+    {
+        id: "1",
+        name: 'Vir Krishna Koyna',
+        image: Krishna_Koyna,
+        type: 'Residential',
+        subtitle: 'Krishna Koyna C.H.S. is a Residential Project At Borivali (W) Having 1 & 2 BHK Residential Units Mordern Amenities.',
+        status: 'Ongoing Project',
+        city: 'Mumbai',
+        locality: 'Borivali (W)',
+        locatedAt: 'Shimpoli Road, Borivali (W), Mumbai - 400 092',
+        arrflats: ['1 BHK', '2 BHK',],
+        flats: '1 & 2 BHK Flats',
+        totalConstructionArea: "Approx. 48600 sq.ft.",
+        buildingInfo: 'Stilt + 1 Commercial + 09 Floors',
+        buildingInfoArr: [
+            'Stilt',
+            '09 Floors',
+            '1 Commercial',
+        ],
+        apartmentOptions: [
+            '1 BHK Flats',
+            '2 BHK Flats',
+        ],
+        contactDetails: [
+            { icon: FaPhoneAlt, phone1: '+91 93262 87741', phone2: '+91 9930510362', },
+            { icon: IoMdMail, email1: 'virgroupmumbai@gmail.com', email2: 'tarun.virgroup@gmail.com', },
+        ],
+        path: '/Vir Krishna Koyna',
+    },
+    {
+        id: "2",
+        name: 'Global Residency',
+        image: Global_Residency,
+        type: 'Residential',
+        subtitle: 'Global Residency C.H.S. is a Residential Project At Goregaon (E) Having 1 & 2 BHK Residential Units with Luxurious Amenities.',
+        status: 'Ongoing Project',
+        city: 'Mumbai',
+        locality: 'Goregaon (E)',
+        locatedAt: 'Goregaon (E), Mumbai - 400 063',
+        arrflats: ['1 BHK', '2 BHK',],
+        flats: '1 & 2 BHK Flats',
+        totalConstructionArea: "Approx. 47300 sq.ft.",
+        buildingInfo: 'Ground + 09 Floors',
+        buildingInfoArr: [
+            'Ground',
+            '09 Floors',
+        ],
+        apartmentOptions: [
+            '1 BHK Flats',
+            '2 BHK Flats',
+        ],
+        contactDetails: [
+            { icon: FaPhoneAlt, phone1: '+91 93262 87741', phone2: '+91 9930510362', },
+            { icon: IoMdMail, email1: 'virgroupmumbai@gmail.com', email2: 'tarun.virgroup@gmail.com', },
+        ],
+        path: '/Global Residency',
+    },
+    {
+        id: "3",
+        name: 'Vir Paradise',
+        image: Vir_Enclave,
+        type: 'Residential + Commercial',
+        subtitle: 'Vir Paradise C.H.S. is a Residential + Commercial Project At Malad (W) Having 1 & 2 BHK Residential Flats.',
+        status: 'Ongoing Project',
+        city: 'Mumbai',
+        locality: 'Malad (W)',
+        locatedAt: 'Malad (W), Mumbai',
+        arrflats: ['1 BHK', '2 BHK',],
+        flats: '1 & 2 BHK Flats',
+        totalConstructionArea: "Approx. 95725 sq.ft.",
+        buildingInfo: '2 Basement + Ground + 1 Commercial + 7 Floors + Terrace Garden',
+        buildingInfoArr: [
+            'Ground',
+            '07 Floors',
+            '2 Basement',
+            '1 Commercial',
+            'Terrace Garden',
+        ],
+        apartmentOptions: [
+            '1 BHK Flats',
+            '2 BHK Flats',
+        ],
+        contactDetails: [
+            { icon: FaPhoneAlt, phone1: '+91 93262 87741', phone2: '+91 9930510362', },
+            { icon: IoMdMail, email1: 'virgroupmumbai@gmail.com', email2: 'tarun.virgroup@gmail.com', },
+        ],
+        path: '/Vir Paradise',
+    },
+    {
+        id: "4",
+        name: 'Vir Enclave',
+        image: Vir_Enclave,
+        type: 'Residential',
+        subtitle: 'Vir Enclave C.H.S. is a Residential Project At Borivali (W) Having 1, 2 & 3 BHK Residential Units with Commercial Units.',
+        status: 'Ongoing Project',
+        city: 'Mumbai',
+        locality: 'Borivali (W)',
+        locatedAt: 'Shimpoli Road, Borivali (W), Mumbai - 400 092',
+        arrflats: ['1 BHK', '2 BHK', '3 BHK'],
+        flats: '1, 2 & 3 BHK Flats',
+        totalConstructionArea: "Approx. 32000 sq.ft.",
+        buildingInfo: 'Ground (Shops) + 1 Commercial + 16 Floors',
+        buildingInfoArr: [
+            '16 Floors',           
+            '1 Commercial',           
+            'Ground (Shops)',
+        ],
+        apartmentOptions: [
+            '1 BHK Flats',
+            '2 BHK Flats',
+            '3 BHK Flats',
+        ],
+        contactDetails: [
+            { icon: FaPhoneAlt, phone1: '+91 93262 87741', phone2: '+91 9930510362', },
+            { icon: IoMdMail, email1: 'virgroupmumbai@gmail.com', email2: 'tarun.virgroup@gmail.com', },
+        ],
+        path: '/Vir Enclave',
+    },
+    {
+        id: "5",
+        name: 'Vir Aradhana',
+        image: Vir_Enclave,
+        type: 'Residential',
+        subtitle: 'Vir Aradhana C.H.S. is a Residential Project At Malad (W) Having 1 & 2 BHK Residential Units with Podium Parking.',
+        status: 'Ongoing Project',
+        city: 'Mumbai',
+        locality: 'Malad (W)',
+        locatedAt: 'Malad (W), Mumbai - 400 097',
+        arrflats: ['1 BHK', '2 BHK'],
+        flats: '1 & 2 BHK Flats',
+        totalConstructionArea: "Approx. 132350 sq.ft.",
+        buildingInfo: 'Ground (Shops) + 1 Commercial + 3 Podium + 14 Floors',
+        buildingInfoArr: [
+            '3 Podium',
+            '14 Floors',           
+            '1 Commercial',           
+            'Ground (Shops)',
+        ],
+        apartmentOptions: [
+            '1 BHK Flats',
+            '2 BHK Flats',
+        ],
+        contactDetails: [
+            { icon: FaPhoneAlt, phone1: '+91 93262 87741', phone2: '+91 9930510362', },
+            { icon: IoMdMail, email1: 'virgroupmumbai@gmail.com', email2: 'tarun.virgroup@gmail.com', },
+        ],
+        path: '/Vir Aradhana',
+    },
+    {
+        id: "6",
+        name: 'Sheetal Suryaprakash',
+        image: Global_Residency,
+        type: 'Residential',
+        subtitle: 'Sheetal Suryaprakash C.H.S. is a Residential Project At Vileparle (E) Having 1 & 2 BHK Residential Units with Terrace Garden Facilities.',
+        status: 'Ongoing Project',
+        city: 'Mumbai',
+        locality: 'Vileparle (E)',
+        locatedAt: 'Vileparle (E), Mumbai',
+        arrflats: ['1 BHK', '2 BHK'],
+        flats: '1 & 2 BHK Flats',
+        totalConstructionArea: "Approx. 69400 sq.ft.",
+        buildingInfo: 'Stilt + 8 Floors + Terrace Gardens',
+        buildingInfoArr: [
+            'Stilt',
+            '8 Floors',           
+            'Terrace Gardens',           
+        ],
+        apartmentOptions: [
+            '1 BHK Flats',
+            '2 BHK Flats',
+        ],
+        contactDetails: [
+            { icon: FaPhoneAlt, phone1: '+91 93262 87741', phone2: '+91 9930510362', },
+            { icon: IoMdMail, email1: 'virgroupmumbai@gmail.com', email2: 'tarun.virgroup@gmail.com', },
+        ],
+        path: '/Sheetal Suryaprakash',
+    },
+]
+
+export default propertyDetails;
