@@ -166,9 +166,9 @@ const Contact = () => {
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
         className="bg-white px-6 py-6 rounded shadow-lg max-w-xl w-full mx-auto relative"
-        overlayClassName="fixed inset-0 bg-[rgba(0,0,0,0.5)] flex items-center justify-center"
+        overlayClassName="fixed inset-0 bg-[rgba(0,0,0,0.5)] flex items-center justify-center p-4"
       >
-        <button onClick={() => setModalIsOpen(false)} className="absolute top-3 right-3"><IoClose className="h-7 w-7 text-gray-500 flex-shrink-0"/></button>
+        <button onClick={() => setModalIsOpen(false)} className="absolute top-3 right-3 cursor-pointer"><IoClose className="h-7 w-7 text-gray-500 flex-shrink-0"/></button>
         <form>
           <h1 className="text-2xl helvectica">Enquiry Form</h1>
           <hr className="my-4 text-gray-300"/>

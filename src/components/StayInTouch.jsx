@@ -16,7 +16,7 @@ const StayInTouch = () => {
                                 type='text'
                                 placeholder='Enter Email Address'
                                 required
-                                className='bg-gray-100 focus:border-2 focus:border-[#00d8ff] helvectica tracking-wider py-3 px-3 lg:p-3 w-full md:w-full lg:w-72 xl:w-96 rounded-sm outline-none'
+                                className='bg-gray-100 border-2 border-transparent focus:border-[#00d8ff] helvectica tracking-wider py-3 px-3 lg:p-3 w-full md:w-full lg:w-72 xl:w-96 rounded-sm outline-none'
                             />
                             <button type='submit' className='text-[#202425] bg-[#00d8ff] font-medium tracking-wide py-2 px-6 md:py-2.5 md:px-10 lg:py-3 w-full md:w-full lg:w-fit rounded-sm transition-all duration-150 ease-in-out cursor-pointer'>Sign up</button>
                         </div>

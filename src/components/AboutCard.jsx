@@ -4,7 +4,7 @@ import CardImage from '../assets/property-details/global-residency.jpeg'
 const AboutCard = () => {
     return (
         <>
-            <div className="max-w-7xl container mx-auto px-4 lg:px-8 py-10 lg:py-20">
+            <div className="max-w-7xl container mx-auto px-6 lg:px-8 py-10 lg:py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 gap-x-10">
                     {/* For Images */}
                     <div className="lg:col-span-6 hidden lg:flex ">
@@ -21,16 +21,16 @@ const AboutCard = () => {
                     <div className="lg:col-span-6">
                         {/* Title and Subtitle */}
                         <div className='flex flex-col items-start sm:items-start lg:items-start justify-center text-left sm:text-center lg:text-left'>
-                            <h1 className="tracking-wider text-xl min-[425px]:text-2xl sm:text-3xl lg:text-3xl text-gray-800 mb-2.5 helvectica">
+                            <h1 className="tracking-wider text-2xl min-[425px]:text-2xl sm:text-3xl lg:text-3xl text-gray-800 mb-2.5 helvectica">
                                 VIR Group, Mumbai
                             </h1>
-                            <p className="tracking-wider text-sm sm:text-lg font-medium helvectica text-gray-700 mb-2">
+                            <p className="tracking-wider text-base sm:text-lg font-medium helvectica text-gray-700 mb-2">
                                 "We Build Your Dreams"
                             </p>
                         </div>
 
                         {/* Description */}
-                        <div className="flex flex-col space-y-5 text-gray-600 text-sm leading-7 my-2 sm:my-4 lg:my-3.5 helvectica tracking-wider">
+                        <div className="flex flex-col space-y-5 text-gray-600 text-sm leading-7 my-2 sm:my-4 lg:my-3.5 helvectica tracking-wider text-justify">
                             <p>
                                 We take this opportunity to introduce ourselves M/s. VIR Group. M/S VIR GROUP is one of the leading real estate companies, duly incorporated under the Indian Companies Act through its Directors Mr. Virabhai Prajapati & Mr. Tarun Prajapati. Being a prominent real estate player, we primarily operate in Mumbai's suburban districts. Our company has a track record of providing high-quality homes and has completed numerous real estate renovation projects with success.
                             </p>

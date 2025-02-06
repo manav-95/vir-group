@@ -9,6 +9,9 @@ import Contact from "./pages/Contact";
 import OurProjects from "./pages/OurProjects";
 import ProjectDetails from "./pages/ProjectDetails";
 import './App.css'
+import UnderConstructionPage from "./pages/UnderConstructionPage";
+import UpcomingProjectPage from "./pages/UpcomingProjectPage";
+import CompletedProjctPage from "./pages/CompletedProjectPage";
 
 function App() {
   return (
@@ -21,8 +24,11 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/our-projects" element={<OurProjects />} />
+          <Route path="/underconstruction-projects" element={<UnderConstructionPage />} />
+          <Route path="/upcoming-projects" element={<UpcomingProjectPage />} />
+          <Route path="/completed-projects" element={<CompletedProjctPage />} />
           <Route path="/:name" element={<ProjectDetails />} />
-          
+
         </Route>
       </Routes>
     </Router>

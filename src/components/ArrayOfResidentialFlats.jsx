@@ -21,7 +21,9 @@ const ArrayOfResidentialFlats = () => {
                 <div className='flex justify-start items-center flex-wrap gap-2 text-sm text-[#333333]'>
                     {residentialProjects.map((item, index) => (
                         <React.Fragment key={index}>
-                            <span className='text-sm helvectica tracking-wide'>{item}</span>
+                            <a href='#' target='_blank'>
+                                <span className='text-sm helvectica tracking-wide hover:underline hover:text-[#1e5593]'>{item}</span>
+                            </a>
                             {index !== residentialProjects.length - 1 && <span className="px-2"><div className='h-5 w-[2px] bg-[#1e5593]'></div></span>}
                         </React.Fragment>
                     ))}
@@ -31,7 +33,9 @@ const ArrayOfResidentialFlats = () => {
                 <div className='flex justify-start items-center flex-wrap gap-2 text-sm text-[#333333]'>
                     {residentialProjects.map((item, index) => (
                         <React.Fragment key={index}>
-                            <span className='text-sm helvectica tracking-wide'>{item}</span>
+                            <a href='#' target='_blank'>
+                                <span className='text-sm helvectica tracking-wide hover:underline hover:text-[#1e5593]'>{item}</span>
+                            </a>
                             {index !== residentialProjects.length - 1 && <span className="px-2"><div className='h-5 w-[2px] bg-[#1e5593]'></div></span>}
                         </React.Fragment>
                     ))}
@@ -41,12 +45,14 @@ const ArrayOfResidentialFlats = () => {
                 <div className='flex justify-start items-center flex-wrap gap-2 text-sm text-[#333333]'>
                     {residentialProjects.map((item, index) => (
                         <React.Fragment key={index}>
-                            <span className='text-sm helvectica tracking-wide'>{item}</span>
+                            <a href='#' target='_blank'>
+                                <span className='text-sm helvectica tracking-wide hover:underline hover:text-[#1e5593]'>{item}</span>
+                            </a>
                             {index !== residentialProjects.length - 1 && <span className="px-2"><div className='h-5 w-[2px] bg-[#1e5593]'></div></span>}
                         </React.Fragment>
                     ))}
                 </div>
-                
+
             </div>
         </div>
     );

@@ -37,7 +37,7 @@ const OurProjects = () => {
 
       {/* Paragraph Section */}
       <div className='max-w-7xl container mx-auto px-4 py-10'>
-        <div className='text-lg helvectica text-center tracking-wide leading-9'>
+        <div className='text-base helvectica text-center tracking-wide leading-9'>
           <p className='mb-4'>
             Redevelopment projects in Mumbai by VIR Group are designed to provide a high-quality living experience. Our upcoming and under-construction projects feature premium amenities and modern facilities. We take pride in creating spaces that seamlessly blend simplicity with elegance. With a strong presence in the real estate industry, our journey is driven by the evolving lifestyle needs of urban dwellers. Don't wait—own a flat in Mumbai and embrace a sophisticated city lifestyle!
           </p>

@@ -19,12 +19,12 @@ const Hero = () => {
       <div className='w-full poppins-regular'>
         <Swiper
           modules={[Autoplay, EffectCreative]}
-          // autoplay={{
-          //   delay: 8000,
-          //   disableOnInteraction: false,
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
 
-          // }}
-          speed={800}
+          }}
+          speed={600}
           loop={true}
           effect={'creative'}
           creativeEffect={{
