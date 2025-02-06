@@ -7,17 +7,17 @@ const companyInfo = [
         landmark: `OPP Oberoi Mall, Western Express Highway,`,
         location: `Malad East, Mumbai - 400 097`,
         contact: '+91 93262 87741',
-        email: 'virparadisesales@gmail.com ',
+        email: 'virgroupmumbai@gmail.com',
     },
     {
         id: 2,
         officeType: 'Company Secretary and Compliance Officer',
-        companyName: 'Jhon Doe',
+        companyName: 'Tarun',
         unitNo: `B- 605, Express Zone,`,
         landmark: `OPP Oberoi Mall, Western Express Highway,`,
         location: `Malad East, Mumbai - 400 097`,
-        contact: '+91 93262 87741',
-        email: 'virparadisesales@gmail.com ',
+        contact: '+91 9930510362',
+        email: 'tarun.virgroup@gmail.com',
     },
 ]
 

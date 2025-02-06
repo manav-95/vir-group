@@ -1,5 +1,6 @@
 import React from 'react';
 import CardImage from '../assets/property-details/global-residency.jpeg'
+import { NavLink } from 'react-router-dom';
 
 const AboutCard = () => {
     return (
@@ -44,9 +45,13 @@ const AboutCard = () => {
 
                         {/* Button */}
                         <div className="w-full md:w-fit">
-                            <button className="bg-transparent tracking-wider w-full md:w-fit my-4 cursor-pointer text-[#00d8ff] py-2 px-6 text-sm rounded-xs hover:shadow border border-[#00d8ff] hover:bg-[#00d8ff] hover:text-black hover:border hover:border-transparent transition-all duration-150 ease-in-out">
-                                Know More
-                            </button>
+                            <NavLink
+                            to={'/about-us'}
+                            >
+                                <button className="bg-transparent tracking-wider w-full md:w-fit my-4 cursor-pointer text-[#00d8ff] py-2 px-6 text-sm rounded-xs hover:shadow border border-[#00d8ff] hover:bg-[#00d8ff] hover:text-black hover:border hover:border-transparent transition-all duration-150 ease-in-out">
+                                    Know More
+                                </button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

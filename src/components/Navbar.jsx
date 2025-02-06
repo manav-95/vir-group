@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
+import { CgMenuRight } from "react-icons/cg";
+import { IoClose } from "react-icons/io5";
+
 
 import Logo from '../assets/white-logo.png'
 import Building1 from '../assets/category-images/building-1.jpg'
@@ -11,6 +14,7 @@ import Building1 from '../assets/category-images/building-1.jpg'
 const Navbar = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLargeMenuOpen, setIsLargeMenuOpen] = useState(true);
   const [showDropdown, setShowDropdown] = useState(false);
 
 
@@ -27,7 +31,7 @@ const Navbar = () => {
     { name: 'Home', path: '/', },
     { name: 'Our Projects', path: '/our-projects', },
     { name: 'Under Construction Redevelopment Projects', path: '/underconstruction-projects' },
-    { name: 'UPcoming Redevelopment Projects', path: '/upcoming-projects' },
+    { name: 'Upcoming Redevelopment Projects', path: '/upcoming-projects' },
     { name: 'Completed Redevelopment Projects', path: '/completed-projects' },
     { name: 'Redevelop with us', path: '/redevelope-with-us', },
     { name: 'Corporate Governance', path: '/corporate-governance', },
@@ -128,7 +132,7 @@ const Navbar = () => {
                   key={index}
                   className='relative'
                 >
-                     {item.type === "dropdown" ? (
+                  {item.type === "dropdown" ? (
                     <div
                       className='cursor-pointer'
                       onMouseEnter={() => setShowDropdown(true)}
@@ -139,9 +143,9 @@ const Navbar = () => {
                         to={item.path}
                         className={({ isActive }) =>
                           isActive
-                        ? 'text-xs xl:text-base font-semibold tracking-wide bg-[#00d8ff] text-black py-2 px-2.5 lg:px-2.5 xl:py-2.5 xl:px-5 uppercase'
-                        : 'text-xs xl:text-base font-medium tracking-wide hover:bg-[#00d8ff] py-2 px-2.5 lg:px-2.5 xl:py-2.5 xl:px-5 uppercase'
-                    }
+                            ? 'text-xs xl:text-base font-semibold tracking-wide bg-[#00d8ff] text-black py-2 px-2.5 lg:px-2.5 xl:py-2.5 xl:px-5 uppercase'
+                            : 'text-xs xl:text-base font-medium tracking-wide hover:bg-[#00d8ff] py-2 px-2.5 lg:px-2.5 xl:py-2.5 xl:px-5 uppercase'
+                        }
                       >
                         {item.name}
                       </NavLink>
@@ -205,23 +209,67 @@ const Navbar = () => {
                       )}
                     </div>
                   ) : (
-                  <NavLink
-                    to={item.path}
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'text-xs xl:text-base font-semibold tracking-wide bg-[#00d8ff] text-black py-2 px-2.5 lg:px-2.5 xl:py-2.5 xl:px-5 uppercase'
-                        : 'text-xs xl:text-base font-medium tracking-wide hover:bg-[#00d8ff] py-2 px-2.5 lg:px-2.5 xl:py-2.5 xl:px-5 uppercase'
-                    }
-                  >
-                    {item.name}
-                  </NavLink>
+                    <NavLink
+                      to={item.path}
+                      className={({ isActive }) =>
+                        isActive
+                          ? 'text-xs xl:text-base font-semibold tracking-wide bg-[#00d8ff] text-black py-2 px-2.5 lg:px-2.5 xl:py-2.5 xl:px-5 uppercase'
+                          : 'text-xs xl:text-base font-medium tracking-wide hover:bg-[#00d8ff] py-2 px-2.5 lg:px-2.5 xl:py-2.5 xl:px-5 uppercase'
+                      }
+                    >
+                      {item.name}
+                    </NavLink>
                   )}
                 </li>
               )}
             </ul>
           </div>
 
-        
+          {/* MENU FOR LARGE SCREENS */}
+          <div className='hidden lg:block'>
+            <button
+            onClick={() => setIsLargeMenuOpen(true)} 
+             className='cursor-pointer'
+             >
+              <CgMenuRight className={`h-8 w-8 flex-shrink-0 ${isLargeMenuOpen ? 'text-[#202425]' : 'text-white'}`} /> 
+            </button>
+          </div>
+
+         
+
+          {/* Sliding Menu Panel */}
+          <div
+            className={`fixed top-0 right-0 h-full w-72 text-white bg-[rgba(0,0,0,0.6)] shadow-lg z-50 transform transition-transform duration-300 ${isLargeMenuOpen ? 'translate-x-0' : 'translate-x-full'
+              }`}
+          >
+            {/* Close Button */}
+            <div className="absolute top-4 left-0 ">
+              <button
+               onClick={() => setIsLargeMenuOpen(false)}
+               className='cursor-pointer py-2 px-2'
+               >
+                <IoClose className="h-8 w-8" />
+              </button>
+            </div>
+
+            {/* Navigation Links */}
+            <nav className="flex flex-col space-y-5 px-6 mt-24">
+              {mobileNavItems.map((item, index) => (
+                <NavLink
+                  key={index}
+                  to={item.path}
+                  className={({isActive}) =>
+                  isActive 
+                  ? 'text-base text-[#00d8ff] helvectica tracking-wider'
+                  : 'text-base helvectica  tracking-wider text-[#999999] hover:text-white transition-all'
+                  }
+                  onClick={() => setIsLargeMenuOpen(false)}
+                >
+                  {item.name}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
 
         </div>
       </div >

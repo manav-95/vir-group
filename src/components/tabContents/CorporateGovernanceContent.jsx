@@ -55,7 +55,7 @@ const CorporateGovernanceContent = () => {
               onClick={() => setActiveButton(activeButton === button.id ? null : button.id)} // Toggle content
               className="w-full flex justify-between items-center text-left border-l-6 border-[#4169e1] py-3 px-3 sm:p-4 md:px-6 md:py-4 bg-white cursor-pointer"
             >
-              <h1 className="text-lg min-[425px]:text-lg  font-medium uppercase">{button.title}</h1>
+              <h1 className="text-base min-[425px]:text-base tracking-wide font-medium uppercase">{button.title}</h1>
               {activeButton === button.id ? (
                 <FaMinus className="h-5 w-5 text-[#4169e1] flex-shrink-0" />
               ) : (
@@ -86,12 +86,12 @@ const CorporateGovernanceContent = () => {
                             className='h-full w-full object-cover object-start mb-2'
                           />
 
-                          <h1 className='text-lg min-[425px]:text-xl sm:text-xl lg:text-lg xl:text-xl font-medium'>{director.name}</h1>
-                          <h1 className='text-gray-500 text-base min-[425px]:text-lg sm:text-base md:text-lg lg:text-base xl:text-lg font-medium'>{director.role}</h1>
-                          <p className='my-3 lg:my-6 line-clamp-3 text-ellipsis font-medium text-gray-500'>{director.description}</p>
+                          <h1 className='text-base min-[425px]:text-lg sm:text-lg lg:text-base xl:text-lg helvectica tracking-wider font-medium'>{director.name}</h1>
+                          <h1 className='text-gray-600 text-base min-[425px]:text-lg sm:text-base md:text-lg lg:text-base xl:text-lg helvectica tracking-wider font-medium'>{director.role}</h1>
+                          <p className='my-2 lg:my-3 line-clamp-3 text-ellipsis font-medium text-[#999999] helvectica tracking-wider text-pretty text-sm'>{director.description}</p>
                           <button
                             onClick={() => openModal(director)}
-                            className='font-medium uppercase '
+                            className='font-medium uppercase cursor-pointer text-sm tracking-wide'
                           >
                             Read More
                           </button>
@@ -131,7 +131,7 @@ const CorporateGovernanceContent = () => {
                               {/* CLOSE BUTTON */}
                               <button
                                 onClick={closeModal}
-                                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+                                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 cursor-pointer"
                               >
                                 <MdOutlineClose className="h-6 w-6" />
                               </button>
@@ -177,12 +177,12 @@ const CorporateGovernanceContent = () => {
                             className='h-full w-full object-cover object-start mb-2'
                           /> */}
 
-                          <h1 className='text-lg min-[425px]:text-xl sm:text-xl lg:text-lg xl:text-xl font-medium'>{managerial.name}</h1>
-                          <h1 className='text-gray-500 text-base min-[425px]:text-lg sm:text-base md:text-lg lg:text-base xl:text-lg font-medium'>{managerial.role}</h1>
+                          <h1 className='text-base min-[425px]:text-lg sm:text-lg lg:text-base xl:text-lg helvectica tracking-wide font-medium'>{managerial.name}</h1>
+                          <h1 className='text-gray-600 text-base min-[425px]:text-lg sm:text-base md:text-lg lg:text-base xl:text-lg helvectica tracking-wide font-medium'>{managerial.role}</h1>
                           {/* <p className='my-3 lg:my-6 line-clamp-3 text-ellipsis font-medium text-gray-500'>{managerial.description}</p> */}
                           <button
                             onClick={() => openModal(managerial)}
-                            className='font-medium uppercase mt-6'
+                            className='font-medium uppercase text-sm tracking-wide mt-6 cursor-pointer'
                           >
                             Read More
                           </button>
@@ -270,7 +270,7 @@ const CorporateGovernanceContent = () => {
 
                             className="w-full flex justify-between items-start text-left border-l-6 border-[#4169e1] py-2.5 px-3 sm:py-3.5 sm:px-4 md:px-6 md:py-3.5 bg-white cursor-pointer"
                           >
-                            <h1 className="text-base min-[425px]:text-lg font-medium uppercase">{button.title}</h1>
+                            <h1 className="text-sm min-[425px]:text-base tracking-wide font-medium uppercase">{button.title}</h1>
                             {boardCommitteActiveButton === button.id ? (
                               <FaMinus className="h-5 w-5 text-[#4169e1] flex-shrink-0" />
                             ) : (
@@ -292,17 +292,17 @@ const CorporateGovernanceContent = () => {
                                       <table className='w-full border border-gray-300'>
                                         <thead className='bg-slate-200'>
                                           <tr>
-                                            <td className='text-base sm:text-md md:text-lg font-medium align-top py-2 px-4 border-b border-gray-300'>Name of the Director</td>
-                                            <td className='text-base sm:text-md md:text-lg font-medium align-top py-2 px-4 border-b border-gray-300'>Position in the Committee</td>
-                                            <td className='text-base sm:text-md md:text-lg font-medium align-top py-2 px-4 border-b border-gray-300'>Designation</td>
+                                            <td className='text-base sm:text-base md:text-lg font-medium align-top helvectica tracking-wide py-2 px-4 border-b border-gray-300'>Name of the Director</td>
+                                            <td className='text-base sm:text-base md:text-lg font-medium align-top helvectica tracking-wide py-2 px-4 border-b border-gray-300'>Position in the Committee</td>
+                                            <td className='text-base sm:text-base md:text-lg font-medium align-top helvectica tracking-wide py-2 px-4 border-b border-gray-300'>Designation</td>
                                           </tr>
                                         </thead>
                                         <tbody>
                                           {committee.details.map((person, index) => (
                                             <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-slate-200'}>
-                                              <td className='text-sm md:text-md lg:text-base align-top py-2 px-4 border-b border-gray-300'>{person.directorName}</td>
-                                              <td className='text-sm md:text-md lg:text-base align-top py-2 px-4 border-b border-gray-300'>{person.directorPosition}</td>
-                                              <td className='text-sm md:text-md lg:text-base align-top py-2 px-4 border-b border-gray-300'>{person.directorDesignation}</td>
+                                              <td className='text-sm md:text-sm lg:text-base align-top py-2 px-4 border-b border-gray-300'>{person.directorName}</td>
+                                              <td className='text-sm md:text-sm lg:text-base align-top py-2 px-4 border-b border-gray-300'>{person.directorPosition}</td>
+                                              <td className='text-sm md:text-sm lg:text-base align-top py-2 px-4 border-b border-gray-300'>{person.directorDesignation}</td>
                                             </tr>
                                           ))}
                                         </tbody>
@@ -326,7 +326,7 @@ const CorporateGovernanceContent = () => {
                 {/* CODES $ POLICIES */}
                 {button.id === 'Codes & Policies' && (
                   <div className='max-w-6xl container mx-auto px-4 md:px-8 xl:px-0'>
-                    <ul className='list-decimal space-y-6'>
+                    <ul className='list-decimal space-y-6 text-base helvectica tracking-wide'>
                       <li className='text-cyan-600 hover:text-cyan-900 transition-all duration-75 ease-in-out'>
                         <a href="#" className='ml-2'>Corporate Social Responsibility Policy</a>
                       </li>

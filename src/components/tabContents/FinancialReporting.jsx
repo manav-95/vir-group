@@ -25,7 +25,7 @@ const FinancialReporting = () => {
               onClick={() => setActiveButton(activeButton === button.id ? null : button.id)} // Toggle content
               className="w-full flex justify-between items-center border-l-6 border-[#4169e1] py-3 px-3 sm:p-4 md:px-6 md:py-4 bg-white cursor-pointer"
             >
-              <h1 className="text-sm min-[425px]:text-lg  font-medium uppercase">{button.title}</h1>
+              <h1 className="text-base min-[425px]:text-base tracking-wide font-medium uppercase">{button.title}</h1>
               {activeButton === button.id ? (
                 <FaMinus className="h-5 w-5 text-[#4169e1]" />
               ) : (
@@ -46,7 +46,7 @@ const FinancialReporting = () => {
                     <div className="w-full px-4">
                       {/* FY 2023-24 */}
                       <div className="mb-6">
-                        <h1 className="text-lg mb-2">FY 2023-24</h1>
+                        <h1 className="text-base mb-2">FY 2023-24</h1>
                         <a href="documents/dummy.pdf" target='_blank'>
                           <button className="flex items-center w-full sm:w-auto text-sm py-2.5 px-4 border rounded-xs text-blue-900 cursor-pointer">
                             <BsFiletypePdf className="h-5 w-5 mr-3 flex-shrink-0" />
@@ -57,7 +57,7 @@ const FinancialReporting = () => {
 
                       {/* FY 2022-23 */}
                       <div>
-                        <h1 className="text-lg mb-2">FY 2022-23</h1>
+                        <h1 className="text-base mb-2">FY 2022-23</h1>
                         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4">
                           <a href="documents/dummy.pdf" target='_blank'>
                             <button className="flex items-center w-full sm:w-auto py-2.5 px-4 border rounded-xs text-sm text-blue-900 cursor-pointer">

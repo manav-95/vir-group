@@ -25,7 +25,7 @@ const CorporateGovernance = () => {
 
         {/* Content on top of the overlay */}
         <div className="relative h-full w-full flex justify-center items-center text-white text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold uppercase">
+          <h1 className="text-4xl helvectica tracking-wider drop-shadow-2xl">
             {tabs.map((tab) =>
               activeTab === tab.id ? tab.title : null
             )}
@@ -44,7 +44,7 @@ const CorporateGovernance = () => {
               >
                 <button
                   onClick={() => setActiveTab(tab.id)}
-                  className={`${activeTab === tab.id ? 'text-black bg-[#00d8ff] rounded-sm' : 'text-white'} w-full cursor-pointer py-3 px-4 font-semibold text-base lg:text-lg uppercase`}
+                  className={`${activeTab === tab.id ? 'text-black bg-[#00d8ff] rounded-sm' : 'text-white'} w-full cursor-pointer py-3 px-4 helvectica tracking-wider text-base lg:text-lg `}
                 >
                   {tab.title}
                 </button>
