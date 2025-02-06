@@ -5,7 +5,18 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    tailwindcss(),
+    tailwindcss({
+      config: {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#00d8ff',
+            },
+          },
+        },
+        plugins: [],
+      },
+    }),
     react(),
   ],
 })

@@ -21,7 +21,7 @@ const Home = () => {
 
         }}
       >
-        <div className='bg-[#333333]'>
+        <div className='bg-[#202425]'>
           <Hero />
         </div>
         <div className="bg-white ">

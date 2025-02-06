@@ -25,11 +25,11 @@ const OurProjects = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[480px] bg-center bg-cover" style={{ backgroundImage: `url(${HeroImage})` }}>
         {/* Overlay using Tailwind 4.0 syntax */}
-        <div className="absolute inset-0 bg-[rgba(0,0,0,0.4)]"></div>
+        <div className="absolute inset-0 bg-[rgba(0,0,0,0.5)]"></div>
 
         {/* Content on top of the overlay */}
         <div className="relative h-full w-full flex justify-center items-center text-white text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-3xl md:text-4xl helvectica tracking-wide">
             Redevelopment Projects In Mumbai
           </h1>
         </div>
@@ -37,7 +37,7 @@ const OurProjects = () => {
 
       {/* Paragraph Section */}
       <div className='max-w-7xl container mx-auto px-4 py-10'>
-        <div className='text-xl text-center leading-10'>
+        <div className='text-lg helvectica text-center tracking-wide leading-9'>
           <p className='mb-4'>
             Redevelopment projects in Mumbai by VIR Group are designed to provide a high-quality living experience. Our upcoming and under-construction projects feature premium amenities and modern facilities. We take pride in creating spaces that seamlessly blend simplicity with elegance. With a strong presence in the real estate industry, our journey is driven by the evolving lifestyle needs of urban dwellers. Don't wait—own a flat in Mumbai and embrace a sophisticated city lifestyle!
           </p>
@@ -49,7 +49,7 @@ const OurProjects = () => {
       <div className="max-w-7xl mx-auto px-4 relative">
         {/* head section */}
         <div className='flex justify-center items-center text-center'>
-          <h1 className='text-4xl font-medium uppercase'>Under Construction Redevelopment Projects</h1>
+          <h1 className='text-3xl font-medium helvectica'>Under Construction Redevelopment Projects</h1>
         </div>
 
         {/* Navigation Buttons */}
@@ -59,13 +59,13 @@ const OurProjects = () => {
           <>
             <button
               onClick={() => swiperUnderConstructionRef.current?.slidePrev()}
-              className="absolute top-3/5 min-[425px]:top-1/2 sm:top-1/2 lg:top-3/7 left-2  transform -translate-y-1/2 bg-[#333] text-white z-10 cursor-pointer p-4 sm:p-3 md:p-4 rounded-full transition-all duration-150 ease-in-out"
+              className="absolute top-4/8 min-[425px]:top-1/2 sm:top-2/4 lg:top-4/8 left-2  transform -translate-y-1/2 bg-[#202425] text-white z-10 cursor-pointer p-4 sm:p-4 md:p-4 rounded-full transition-all duration-150 ease-in-out"
             >
               <FaAngleLeft className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
             <button
               onClick={() => swiperUnderConstructionRef.current?.slideNext()}
-              className="absolute top-3/5 min-[425px]:top-1/2 sm:top-1/2 lg:top-3/7 right-2 transform -translate-y-1/2 bg-[#333] text-white z-10 cursor-pointer p-4 sm:p-3 md:p-4 rounded-full transition-all duration-150 ease-in-out"
+              className="absolute top-4/8 min-[425px]:top-1/2 sm:top-2/4 lg:top-4/8 right-2 transform -translate-y-1/2 bg-[#202425] text-white z-10 cursor-pointer p-4 sm:p-4 md:p-4 rounded-full transition-all duration-150 ease-in-out"
             >
               <FaAngleRight className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
@@ -108,17 +108,18 @@ const OurProjects = () => {
                     className='w-full h-full object-center object-cover aspect-[6/8] rounded-sm'
                   />
                   <div className='w-full lg:hidden lg:group-hover:flex justify-center items-center group-hover:absolute bg-[rgba(0,0,0,0.4)] inset-0 rounded'>
-                    <NavLink
-                      to={`/${item.name}`}
+                    <a 
+                    href={`/${item.name}`}
+                    target='_blank'
                     >
-                      <button className='w-full lg:w-fit bg-[rgba(0,0,0,0.8)] text-white py-2 min-[425px]:py-3 sm:py-2 md:py-3 px-6 cursor-pointer uppercase'>View Details</button>
-                    </NavLink>
+                      <button className='w-full lg:w-fit bg-[rgba(0,0,0,0.8)] text-white py-2 min-[425px]:py-3 sm:py-2 md:py-2 px-6 cursor-pointer uppercase'>View Details</button>
+                    </a>
                   </div>
                 </div>
-                <div className='group-hover:bg-gray-50 flex flex-col items-center justify-center text-center bg-gray-100 w-full mt-4 p-2 -space-y-0.5 uppercase rounded-sm'>
-                  <h1 className='text-sm min-[425px]:text-lg min-[425px]:font-semibold font-bold text-black'>{item.name}</h1>
-                  <p className='text-xs min-[425px]:text-base min-[425px]:font-medium font-semibold text-gray-500'>{item.flats}</p>
-                  <p className='text-xs min-[425px]:text-base min-[425px]:font-medium font-semibold text-gray-500'>{item.locality}</p>
+                <div className='group-hover:bg-transparent flex flex-col items-center justify-center text-center bg-gray-50 w-full mt-4 p-2 -space-y-0.5 uppercase rounded-xs'>
+                  <h1 className='text-sm font-semibold mb-0.5 min-[425px]:text-base min-[425px]:font-semibold helvectica text-black'>{item.name}</h1>
+                  <p className='text-xs min-[425px]:text-sm helvectica text-gray-500'>{item.flats}</p>
+                  <p className='text-xs min-[425px]:text-sm helvectica text-gray-500'>{item.locality}</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -129,10 +130,10 @@ const OurProjects = () => {
       </div>
 
       {/* COMPLETED PROJECTS SECTION */}
-      <div className="max-w-7xl mx-auto px-4 relative">
+      <div className="max-w-7xl mx-auto px-4 py-10 relative">
         {/* head section */}
         <div className='flex justify-center items-center text-center'>
-          <h1 className='text-4xl font-medium uppercase'>Completed Redevelopment Projects</h1>
+          <h1 className='text-3xl font-medium helvectica'>Completed Redevelopment Projects</h1>
         </div>
 
         {/* Navigation Buttons */}
@@ -142,13 +143,13 @@ const OurProjects = () => {
           <>
             <button
               onClick={() => swiperCompletedRef.current?.slidePrev()}
-              className="absolute top-3/5 min-[425px]:top-1/2 sm:top-1/2 lg:top-3/7 left-2  transform -translate-y-1/2 bg-[#333] text-white z-10 cursor-pointer p-4 sm:p-3 md:p-4 rounded-full transition-all duration-150 ease-in-out"
+              className="absolute top-4/8 min-[425px]:top-1/2 sm:top-2/4 lg:top-4/8 left-2  transform -translate-y-1/2 bg-[#202425] text-white z-10 cursor-pointer p-4 sm:p-4 md:p-4 rounded-full transition-all duration-150 ease-in-out"
             >
               <FaAngleLeft className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
             <button
               onClick={() => swiperCompletedRef.current?.slideNext()}
-              className="absolute top-3/5 min-[425px]:top-1/2 sm:top-1/2 lg:top-3/7 right-2 transform -translate-y-1/2 bg-[#333] text-white z-10 cursor-pointer p-4 sm:p-3 md:p-4 rounded-full transition-all duration-150 ease-in-out"
+              className="absolute top-4/8 min-[425px]:top-1/2 sm:top-2/4 lg:top-4/8 right-2 transform -translate-y-1/2 bg-[#202425] text-white z-10 cursor-pointer p-4 sm:p-4 md:p-4 rounded-full transition-all duration-150 ease-in-out"
             >
               <FaAngleRight className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
@@ -191,17 +192,18 @@ const OurProjects = () => {
                     className='w-full h-full object-center object-cover aspect-[6/8] rounded-sm'
                   />
                   <div className='w-full lg:hidden lg:group-hover:flex justify-center items-center group-hover:absolute bg-[rgba(0,0,0,0.4)] inset-0 rounded'>
-                    <NavLink
-                      to={`/${item.name}`}
+                  <a 
+                    href={`/${item.name}`}
+                    target='_blank'
                     >
-                      <button className='w-full lg:w-fit bg-[rgba(0,0,0,0.8)] text-white py-2 min-[425px]:py-3 sm:py-2 md:py-3 px-6 cursor-pointer uppercase'>View Details</button>
-                    </NavLink>
+                      <button className='w-full lg:w-fit bg-[rgba(0,0,0,0.8)] text-white py-2 min-[425px]:py-3 sm:py-2 md:py-2 px-6 cursor-pointer uppercase'>View Details</button>
+                      </a>
                   </div>
                 </div>
-                <div className='group-hover:bg-gray-50 flex flex-col items-center justify-center text-center bg-gray-100 w-full mt-4 p-2 -space-y-0.5 uppercase rounded-sm'>
-                  <h1 className='text-sm min-[425px]:text-lg min-[425px]:font-semibold font-bold text-black'>{item.name}</h1>
-                  <p className='text-xs min-[425px]:text-base min-[425px]:font-medium font-semibold text-gray-500'>{item.flats}</p>
-                  <p className='text-xs min-[425px]:text-base min-[425px]:font-medium font-semibold text-gray-500'>{item.locality}</p>
+                <div className='group-hover:bg-transparent flex flex-col items-center justify-center text-center bg-gray-50 w-full mt-4 p-2 -space-y-0.5 uppercase rounded-xs'>
+                  <h1 className='text-sm font-semibold mb-0.5 min-[425px]:text-base min-[425px]:font-semibold helvectica text-black'>{item.name}</h1>
+                  <p className='text-xs min-[425px]:text-sm helvectica text-gray-500'>{item.flats}</p>
+                  <p className='text-xs min-[425px]:text-sm helvectica text-gray-500'>{item.locality}</p>
                 </div>
               </div>
             </SwiperSlide>

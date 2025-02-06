@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import OurProjects from "./pages/OurProjects";
 import ProjectDetails from "./pages/ProjectDetails";
-
+import './App.css'
 
 function App() {
   return (

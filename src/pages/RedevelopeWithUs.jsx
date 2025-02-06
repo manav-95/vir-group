@@ -18,18 +18,18 @@ const RedevelopeWithUs = () => {
     { id: '3', title: 'How to choose the right developer for redevelopment?', },
   ]
 
-  
+
   return (
     <>
       {/* HERO SECTION */}
       <div className="relative w-full h-[480px] bg-center bg-cover" style={{ backgroundImage: `url(${HeroImage})` }}>
         {/* Overlay using Tailwind 4.0 syntax */}
-        <div className="absolute inset-0 bg-[rgba(0,0,0,0.5)]"></div>
+        <div className="absolute inset-0 bg-[rgba(0,0,0,0.6)]"></div>
 
         {/* Content on top of the overlay */}
         <div className="relative h-full w-full md:max-w-2xl lg:max-w-3xl xl:max-w-4xl container mx-auto flex flex-col justify-center text-white text-center px-4">
 
-          <h1 className="text-4xl md:text-5xl font-semibold">
+          <h1 className="text-3xl md:text-4xl helvectica tracking-wider">
             Let us Help You Redevelope
           </h1>
 
@@ -40,31 +40,31 @@ const RedevelopeWithUs = () => {
                   type="text"
                   placeholder='Name'
                   name="name"
-                 
+
                   required
-                  className='border-2 border-white w-full py-3 px-4 rounded-xs outline-none'
+                  className='border-2 border-gray-300 tracking-wider w-full py-3 px-4 rounded-md outline-none'
                 />
                 <input
                   type="text"
                   placeholder='Email'
                   name="email"
-                 
+
                   required
-                  className='border-2 border-white w-full py-3 px-4 rounded-xs outline-none'
+                  className='border-2 border-gray-300 tracking-wider w-full py-3 px-4 rounded-md outline-none'
                 />
                 <input
                   type="number"
                   placeholder='Contact No.'
                   name="contact"
-                 
+
                   required
-                  className='border-2 border-white w-full py-3 px-4 rounded-xs outline-none'
+                  className='border-2 border-gray-300 tracking-wider w-full py-3 px-4 rounded-md outline-none'
                 />
               </div>
               <div className='w-full'>
                 <button
                   type='submit'
-                  className='bg-[#00d8ff] py-2.5 px-12 w-full md:w-fit uppercase text-lg font-semibold text-black rounded-xs cursor-pointer'
+                  className='bg-[#00d8ff] py-2.5 px-12 w-full md:w-fit helvectica text-lg tracking-wide text-black rounded-md cursor-pointer'
                 >
                   Submit
                 </button>
@@ -75,21 +75,22 @@ const RedevelopeWithUs = () => {
         </div>
       </div>
 
+      {/* ABOUT REDEVELOPMENT SECTION */}
       <div className='max-w-7xl container mx-auto px-4 py-12 lg:py-16'>
 
         <div className='mb-10 lg:mb-12'>
-          <h1 className='text-2xl min-[425px]:text-3xl md:text-4xl font-medium'>What is Re-development?</h1>
-          <p className='my-4'>
+          <h1 className='text-xl min-[425px]:text-2xl md:text-3xl helvectica tracking-wide'>What is Re-development?</h1>
+          <p className='my-4 tracking-wider helvectica leading-7'>
             Redevelopment is the process of demolishing existing old dilapidated society building and reconstructing it by appointing a good developer who can construct and handover new flats to the society members free of cost with better modern day amenities and make profit by utilizing balance plot potential by constructing additional flats and shops as per approval from the concerned development authorities.
           </p>
         </div>
 
         <div>
-          <h1 className='text-2xl min-[425px]:text-3xl md:text-4xl font-medium'>Why Re-development?</h1>
-          <p className='my-4'>
+          <h1 className='text-xl min-[425px]:text-2xl md:text-3xl helvectica tracking-wide'>Why Re-development?</h1>
+          <p className='my-4 tracking-wider helvectica leading-7'>
             The old society buildings were built over a period on 3-4 decades & are in very bad shape. Infrastructure facilities for electricity. water & sewage are overloaded & needs immediate replacement. Societies need huge funds to undertake major repairs. The structure of old buildings have outlived its life & needs to be pulled and developed afresh as further repairs to the existing structure won't be advisable & feasible. Redeveloped buildings have negligible maintenance and repair cost at least for 15-20 years.
           </p>
-          <p className='mb-4'>
+          <p className='mb-4 tracking-wider helvectica leading-7'>
             New redeveloped buildings have better infrastructure facilities in respect of plumbing/ electrical & sewage requirements as ISI marked materials are used & the work is also carried out by certified contractor. Redeveloped buildings provide other amenities like watchman's' cabin, society office. servants' toilets, better entrance lobby layout, dry balconies, flowerbeds. better external elevation, better compound walls & flooring which is not the case with old society buildings. New buildings have adequate number of car parking for its members.
           </p>
         </div>
@@ -101,7 +102,7 @@ const RedevelopeWithUs = () => {
       <div className='max-w-7xl container mx-auto px-4'>
         {/* HEADING */}
         <div className='flex justify-center items-center text-center'>
-          <h1 className='text-4xl font-medium uppercase'>FAQ's on Redevelopment</h1>
+          <h1 className='text-3xl tracking-wide helvectica'>FAQ's on Redevelopment</h1>
         </div>
 
         {/* BUTTONS */}
@@ -116,7 +117,7 @@ const RedevelopeWithUs = () => {
                   onClick={() => setActiveButton(activeButton === button.id ? null : button.id)} // Toggle content
                   className="w-full flex justify-between items-start text-left border-l-[5px] border-[#4169e1] py-3 px-3 sm:p-4 md:px-6 md:py-4 bg-white cursor-pointer"
                 >
-                  <h1 className="text-lg min-[425px]:text-lg  font-medium uppercase">{button.title}</h1>
+                  <h1 className="text-lg min-[425px]:text-lg helvectica tracking-wide">{button.title}</h1>
                   {activeButton === button.id ? (
                     <FaMinus className="h-5 w-5 text-[#4169e1] flex-shrink-0" />
                   ) : (
@@ -139,13 +140,13 @@ const RedevelopeWithUs = () => {
                           {/* display when there is a heading in an object */}
                           {faq.heading &&
                             <div className='max-w-6xl container mx-auto mb-6'>
-                              <p className='text-base'>{faq.heading}</p>
+                              <p className='text-base helvectica tracking-wider'>{faq.heading}</p>
                             </div>
                           }
 
                           {/* display when there is a paragraph in an object */}
                           {faq.paragraph &&
-                            <p>{faq.paragraph}</p>
+                            <p className='text-md helvectica tracking-wider leading-7'>{faq.paragraph}</p>
                           }
 
                           {/* display when there is any contents in an object */}
@@ -157,7 +158,7 @@ const RedevelopeWithUs = () => {
                                   key={index}
                                 >
                                   <div className="max-w-6xl comtainer mx-auto text-left border-l-[5px] border-[#4169e1] mb-2.5 py-2.5 px-3 sm:py-3.5 sm:px-4 md:px-6 md:py-3 bg-white cursor-pointer">
-                                    <p className='text-base min-[425px]:text-base font-medium uppercase'>{content}</p>
+                                    <p className='text-lg min-[425px]:text-lg helvectica tracking-wider font-medium'>{content}</p>
                                   </div>
                                 </div>
                               )}

@@ -19,10 +19,10 @@ export default function Testimonials() {
     const swiperRef = useRef(null);
 
     return (
-        <div className="bg-[#333333] py-12 ">
+        <div className="bg-[#202425] py-16 ">
             <div className="max-w-7xl container mx-auto px-4">
-                <h2 className="text-3xl min-[425px]:text-4xl font-semibold text-white text-center md:hidden">Testimonials</h2>
-                <h2 className="text-3xl min-[425px]:text-4xl font-semibold text-white text-center hidden md:block">What Our Clients Says</h2>
+                {/* <h2 className="text-3xl min-[425px]:text-4xl font-semibold text-white text-center md:hidden">Testimonials</h2> */}
+                <h2 className="text-3xl min-[425px]:text-3xl text-white text-center helvectica tracking-wider">Happy Clients</h2>
                 <Swiper
                     modules={[Pagination, A11y, Autoplay]}
                     spaceBetween={30}
@@ -52,10 +52,10 @@ export default function Testimonials() {
                         <div className="h-full">
                             <SwiperSlide
                                 key={testimonial.id}
-                                className="h-full w-full mt-10 cursor-grab"
+                                className="h-full w-full mt-16 cursor-grab"
                             >
-                                <h3 className="text-2xl text-center mb-4 font-semibold text-white">{testimonial.name}</h3>
-                                <p className="text-lg text-white text-center">{testimonial.content}</p>
+                                <h3 className="text-xl text-center mb-4 helvectica tracking-wider text-white">{testimonial.name}</h3>
+                                <p className="text-base tracking-wide font-light leading-5.5 text-white text-center">{testimonial.content}</p>
                             </SwiperSlide>
                         </div>
                     ))}
@@ -63,8 +63,8 @@ export default function Testimonials() {
                     <div className="custom-pagination !my-8 flex space-x-2 justify-center cursor-pointer "></div>
 
                     <div className="flex justify-center items-center space-x-4">
-                        <button onClick={() => swiperRef.current?.slidePrev()} className='border-2 border-[#00d8ff] bg-transparent hover:bg-[#00d8ff] focus:bg-[#00d8ff] text-[#00d8ff] hover:text-black focus:text-black p-3 lg:p-4 rounded-full cursor-pointer duration-150 transition-all ease-in-out'><FaAngleLeft className='h-5 w-5' /></button>
-                        <button onClick={() => swiperRef.current?.slideNext()} className='border-2 border-[#00d8ff] bg-transparent hover:bg-[#00d8ff] focus:bg-[#00d8ff] text-[#00d8ff] hover:text-black focus:text-black p-3 lg:p-4 rounded-full cursor-pointer duration-150 transition-all ease-in-out'><FaAngleRight className='h-5 w-5' /></button>
+                        <button onClick={() => swiperRef.current?.slidePrev()} className='border-2 border-[#00d8ff] bg-transparent hover:bg-[#00d8ff] focus:bg-[#00d8ff] text-[#00d8ff] hover:text-black focus:text-black p-2.5 lg:p-3.5 lg:mt-2 rounded-full cursor-pointer duration-150 transition-all ease-in-out'><FaAngleLeft className='h-5 w-5' /></button>
+                        <button onClick={() => swiperRef.current?.slideNext()} className='border-2 border-[#00d8ff] bg-transparent hover:bg-[#00d8ff] focus:bg-[#00d8ff] text-[#00d8ff] hover:text-black focus:text-black p-2.5 lg:p-3.5 lg:mt-2 rounded-full cursor-pointer duration-150 transition-all ease-in-out'><FaAngleRight className='h-5 w-5' /></button>
                     </div>
                 </Swiper>
             </div>

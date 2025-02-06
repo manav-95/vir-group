@@ -6,13 +6,14 @@ import { IoMdMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import ArrayOfResidentialFlats from './ArrayOfResidentialFlats';
 
 const Footer = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Our Projects', path: '/our-projects' },
     { name: 'Revedevlopment', path: '/redevelope-with-us' },
-     { name: 'Corporate Governance', path: '/corporate-governance' },
+    { name: 'Corporate Governance', path: '/corporate-governance' },
     { name: 'About Us', path: '/about-us' },
     { name: 'Contact Us', path: '/contact-us' },
     { name: 'Terms & Conditions', path: '/terms-and-conditions' },
@@ -21,11 +22,12 @@ const Footer = () => {
 
   return (
     <>
+      <ArrayOfResidentialFlats />
       <StayInTouch />
-      <footer className="w-full bg-[#333333] text-white py-8">
+      <footer className="w-full bg-[#202425] text-white py-8">
         <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            
+
             {/* Logo & Description */}
             <div>
               <img src={Logo} alt="Logo" className="h-24 w-32" />
@@ -74,21 +76,21 @@ const Footer = () => {
               <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <FaPhoneAlt className='flex-shrink-0 h-4 w-4 mr-2 mt-1'/>
+                  <FaPhoneAlt className='flex-shrink-0 h-4 w-4 mr-2 mt-1' />
                   <div>
                     <p>+91 93262 87741</p>
                     <p>+91 9930510362</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                 <IoMdMail className='flex-shrink-0 h-4 w-4 mr-2 mt-1'/>
+                  <IoMdMail className='flex-shrink-0 h-4 w-4 mr-2 mt-1' />
                   <div>
                     <p>virgroupmumbai@gmail.com</p>
                     <p>tarun.virgroup@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex">
-                  
+
                   <p className="max-w-xs">
                     B-605, Express Zone, OPP Oberoi Mall, Western Express Highway, Malad East, Mumbai - 400097
                   </p>
