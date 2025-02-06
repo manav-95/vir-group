@@ -14,7 +14,7 @@ import Building1 from '../assets/category-images/building-1.jpg'
 const Navbar = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLargeMenuOpen, setIsLargeMenuOpen] = useState(true);
+  const [isLargeMenuOpen, setIsLargeMenuOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
 
 
@@ -239,7 +239,7 @@ const Navbar = () => {
 
           {/* Sliding Menu Panel */}
           <div
-            className={`fixed top-0 right-0 h-full w-72 text-white bg-[rgba(0,0,0,0.6)] shadow-lg z-50 transform transition-transform duration-300 ${isLargeMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            className={`fixed top-0 right-0 h-full w-72 text-white bg-[rgba(0,0,0,0.7)] shadow-lg z-50 transform transition-transform duration-300 ${isLargeMenuOpen ? 'translate-x-0' : 'translate-x-full'
               }`}
           >
             {/* Close Button */}
