@@ -1,5 +1,6 @@
 import React from 'react';
-import CardImage from '../assets/property-details/global-residency.jpeg'
+// import CardImage from '../assets/property-details/global-residency.jpeg'
+import CardImage from '../assets/about-card-images/card-image.jpg'
 import { NavLink } from 'react-router-dom';
 
 const AboutCard = () => {
