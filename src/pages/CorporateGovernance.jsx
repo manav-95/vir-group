@@ -12,7 +12,7 @@ const CorporateGovernance = () => {
 
   const tabs = [
     { id: 'Corporate Governance', component: <CorporateGovernanceContent />, title: 'Corporate Governance' },
-    { id: 'Financial Reporting', component: <FinancialReporting />, title: 'Financial Reporting' },
+    // { id: 'Financial Reporting', component: <FinancialReporting />, title: 'Financial Reporting' },
     { id: 'Company Information', component: <CompanyInformation />, title: 'Company Information' },
   ]
 
@@ -36,7 +36,7 @@ const CorporateGovernance = () => {
       {/* TABS BUTTONS */}
       <div className='bg-gradient-to-b from-cyan-500 to-blue-500'>
         <div className='max-w-7xl container mx-auto px-2 md:px-2 xl:px-4'>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-0 py-2 md:py-2'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-0 py-2 md:py-2'>
             {tabs.map((tab) =>
               <div
                 key={tab.id}

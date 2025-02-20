@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import Hero2 from '../components/Hero2';
 import AboutCard from '../components/AboutCard';
 import InfoCards from '../components/InfoCards';
 import BG from '../assets/bg.jpg';
@@ -22,7 +23,8 @@ const Home = () => {
         }}
       >
         <div className='bg-[#202425]'>
-          <Hero />
+          {/* <Hero /> */}
+          <Hero2 />
         </div>
         <div className="bg-white ">
           <AboutCard />

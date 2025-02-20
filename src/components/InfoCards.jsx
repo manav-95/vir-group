@@ -2,9 +2,9 @@ import React from 'react'
 
 const InfoCards = () => {
     const information = [
-        { count: '00', title: 'Completed', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
-        { count: '00', title: 'Under Construction', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
-        { count: '00', title: 'Upcoming', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
+        { count: '04', title: 'Completed', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
+        { count: '02', title: 'Under Construction', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
+        { count: '01', title: 'Upcoming', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
     ]
     return (
         <>
@@ -25,7 +25,7 @@ const InfoCards = () => {
                             >
                                 <h1 className='text-xl min-[425px]:text-2xl flex items-end gap-2 helvectica'><p className='text-xl min-[425px]:text-4xl font-lighter lg:text-3xl xl:text-3xl'>{info.count}</p>{info.title}</h1>
                                 <p className='text-sm min-[425px]:text-base'>{info.text}</p>
-                                <p className='text-xl min-[425px]:text-2xl helvectica'>{info.sqft}</p>
+                                {/* <p className='text-xl min-[425px]:text-2xl helvectica'>{info.sqft}</p> */}
                             </div>
                         )}
                     </div>

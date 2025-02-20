@@ -2,8 +2,10 @@ import React from 'react'
 
 import propertyDetails from "../data/PorpertyDetails"
 
+import Coming_Soon from '../assets/featured-projects/coming-soon.png'
+
 const FeaturedProjects = () => {
- 
+
   return (
     <>
       <div className='max-w-7xl container mx-auto py-16 px-4 lg:px-8'>
@@ -15,27 +17,48 @@ const FeaturedProjects = () => {
 
         {/* grid Section */}
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 xl:gap-16 pt-10 lg:pt-10 xl:pt-14'>
-          {propertyDetails.map((detail, index) =>
-            <div key={index}>
+          {propertyDetails.map((detail) =>
+            <div key={detail.id}>
               <div
 
                 className='group border border-transparent hover:border-gray-200 ease-in-out hover:shadow-2xl hover:scale-105 flex flex-col bg-white items-center justify-center p-4 rounded transition-all duration-300'
               >
                 <div className='w-full h-full relative'>
-                  <img
-                    src={detail.image}
-                    alt={detail.name}
-                    className='w-full h-full object-center object-fill aspect-[4/5] rounded'
-                  />
-                  <div className='w-full lg:hidden lg:group-hover:flex justify-center items-center group-hover:absolute bg-[rgba(0,0,0,0.4)] inset-0 rounded'>
-                    <a
-                      href={`/${detail.name}`}
-                      target='_blank'
-                    >
-                      <button className='w-full lg:w-fit bg-[rgba(0,0,0,0.8)] text-white py-2 min-[425px]:py-3 sm:py-2 md:py-2 px-6 cursor-pointer uppercase'>View Details</button>
-                    </a>
-                  </div>
+                  {detail.image ? (
+                    <img
+                      src={detail.image}
+                      alt={detail.name}
+                      className='w-full h-full object-center object-fill aspect-[4/5] rounded'
+                    />
+                  ) : (
+                    <>
+
+                      <div
+                        style={{ backgroundImage: `url(${Coming_Soon})` }}
+                        className='w-full h-full sm:py-4 bg-gray-100 bg-center bg-contain  relative aspect-[4/5] flex justify-center items-center'>
+                        <p className='absolute bottom-2 min-[425px]:bottom-4 sm:bottom-4 lg:bottom-8 xl:bottom-10 text-2xl min-[425px]:text-3xl lg:text-2xl font-bold uppercase text-gray-400'>Coming Soon</p>
+                      </div>
+
+
+                      <div className='w-full lg:hidden bg-gray-100 justify-center items-center inset-0 rounded'>
+                        <button className='w-full lg:w-fit bg-gray-100 text-gray-100 py-2 min-[425px]:py-3 sm:py-2 md:py-2 px-6 cursor-none uppercase'>View Details</button>
+                      </div>
+                    </>
+                  )}
+
+                  {detail.buttonText && (
+                    <div className='w-full lg:hidden lg:group-hover:flex justify-center items-center group-hover:absolute bg-[rgba(0,0,0,0.4)] inset-0 rounded'>
+                      <a
+                        href={`/${detail.name}`}
+                        target='_blank'
+                      >
+                        <button className='w-full lg:w-fit bg-[rgba(0,0,0,0.8)] text-white py-2 min-[425px]:py-3 sm:py-2 md:py-2 px-6 cursor-pointer uppercase'>{detail.buttonText}</button>
+                      </a>
+                    </div>
+                  )}
                 </div>
+
+
                 <div className='flex flex-col items-center justify-center text-center w-full px-2 mt-1 pt-1.5 space-y-0 uppercase rounded tracking-wide'>
                   <h1 className='text-sm font-semibold mb-0.5'>{detail.name}</h1>
                   <p className='text-xs text-gray-400 helvectica'>{detail.flats}</p>

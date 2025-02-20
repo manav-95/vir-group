@@ -45,36 +45,33 @@ const Navbar = () => {
       categoryName: 'Under Construction',
       categoryTitle: 'Redevelopment Projects',
       items: [
-        { path: '/Vir%20Enclave', image: Building1, title: 'Vir Enclave', flats: '2 & 3 BHK Flats', location: 'Location Here, Mumbai', },
-        //{ image: Building1, title: 'Jamuna Mahal C.H.S.L', flats: '2 & 3 BHK Flats', location: 'SantaCruz East, Mumbai', },
-        //{ image: Building1, title: 'Jamuna Mahal C.H.S.L', flats: '2 & 3 BHK Flats', location: 'SantaCruz East, Mumbai', },
-      ],
+        { path: '/Vir Paradise', image: Building1, title: 'Vir Paradise', flats: '2 & 3 BHK Flats', location: 'Malad (W), Mumbai', },
+        ],
       path: '/underconstruction-projects',
     },
 
 
     {
       id: 2,
-      categoryName: 'Upcoming',
-      categoryTitle: 'Redevelopment Projects',
-      items: [
-        { path: '/Krishna', image: Building1, title: 'Krishna Koyna', flats: '2 & 3 BHK Flats', location: 'Location Here, Mumbai', },
-
-      ],
-      path: '/upcoming-projects',
-    },
-
-
-    {
-      id: 3,
       categoryName: 'Completed',
       categoryTitle: 'Redevelopment Projects',
       items: [
-        { path: '/krishna', image: Building1, title: 'Krishna Koyna', flats: '2 & 3 BHK Flats', location: 'Location Here, Mumbai', },
-        { path: '/global', image: Building1, title: 'Global Residency', flats: '2 & 3 BHK Flats', location: 'Location Here, Mumbai', },
-        //{ image: Building1, title: 'Jamuna Mahal C.H.S.L', flats: '2 & 3 BHK Flats', location: 'SantaCruz East, Mumbai', },
+        { path: '/Vir Krishna Koyna', image: Building1, title: 'VIR Krishna Koyna', flats: '1 & 2 BHK Flats', location: 'Borivali (W), Mumbai', },
+        { path: '/Global Residency', image: Building1, title: 'Global Residency', flats: '1 & 2 BHK Flats', location: 'Goregaon [E], Mumbai', },
       ],
       path: '/completed-projects',
+    },
+
+    {
+      id: 3,
+      categoryName: 'Upcoming',
+      categoryTitle: 'Redevelopment Projects',
+      items: [
+        { path: '/Sheetal Suryaprakash', image: Building1, title: 'Sheetal Suryaprakash', flats: '1 & 2 BHK Flats', location: 'Vileparle (E), Mumbai', },
+        {  image: Building1, title: 'Vir Aradhana', flats: '1 & 2 BHK Flats', location: 'Malad (W), Mumbai', },
+
+      ],
+      path: '/upcoming-projects',
     },
 
   ]
@@ -150,7 +147,7 @@ const Navbar = () => {
                         {item.name}
                       </NavLink>
                       {showDropdown && (
-                        <div className="absolute lg:-translate-x-[300px] xl:-translate-x-80 bg-gray-50 lg:w-4xl xl:w-5xl py-8 px-4 rounded shadow-xl lg:mt-0.5  xl:mt-2">
+                        <div className="absolute z-50 lg:-translate-x-[300px] xl:-translate-x-80 bg-gray-50 lg:w-4xl xl:w-5xl py-8 px-4 rounded shadow-xl lg:mt-0.5  xl:mt-2">
                           <div className="flex items-start justify-evenly space-x-3 xl:space-x-6">
                             {/* Map through each category */}
                             {CategoryItems.map((category) => (

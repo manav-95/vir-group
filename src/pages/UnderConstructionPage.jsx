@@ -36,8 +36,8 @@ const UnderConstructionPage = () => {
 
                 {/* grid Section */}
                 <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 xl:gap-16 pt-10 lg:pt-10 xl:pt-14'>
-                    {propertyDetails.map((detail, index) =>
-                        <div key={index}>
+                    {propertyDetails.filter(detail => detail.underConstruction === true).map((detail) =>
+                        <div key={detail.id}>
                             <div
 
                                 className='group border border-transparent hover:border-gray-200 ease-in-out hover:shadow-2xl hover:scale-105 flex flex-col bg-white items-center justify-center p-4 rounded transition-all duration-300'
