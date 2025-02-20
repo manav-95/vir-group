@@ -145,6 +145,13 @@ const ProjectDetails = () => {
 
                         </div>
 
+                        <div className='md:max-w-2xl lg:max-w-full mx-auto container text-sm lg:text-base  py-6 helvectica tracking-wider leading-7.5 text-gray-400'>
+                            <p className='text-justify text-align-last-center'>
+                                We take this opportunity to introduce ourselves M/s. VIR Group. M/S VIR GROUP is one of the leading real estate companies, duly incorporated under the Indian Companies Act through its Directors Mr. Virabhai Prajapati & Mr. Tarun Prajapati. Being a prominent real estate player, we primarily operate in Mumbai's suburban districts. Our company has a track record of providing high-quality homes and has completed numerous real estate renovation projects with success.
+                            </p>
+                        </div>
+
+
                     </div>
                 </div>
 
