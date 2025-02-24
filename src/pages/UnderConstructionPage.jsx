@@ -35,7 +35,7 @@ const UnderConstructionPage = () => {
                 </div>
 
                 {/* grid Section */}
-                <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 xl:gap-16 pt-10 lg:pt-10 xl:pt-14'>
+                {/* <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 xl:gap-16 pt-10 lg:pt-10 xl:pt-14'>
                     {propertyDetails.filter(detail => detail.underConstruction === true).map((detail) =>
                         <div key={detail.id}>
                             <div
@@ -65,7 +65,34 @@ const UnderConstructionPage = () => {
                             </div>
                         </div>
                     )}
-                </div>
+                </div> */}
+
+<div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 xl:gap-16 pt-10 lg:pt-10 xl:pt-14">
+  <div className="lg:col-start-2"> {/* Ensures centering */}
+    <div className="group border border-transparent hover:border-gray-200 ease-in-out hover:shadow-2xl hover:scale-105 flex flex-col bg-white items-center justify-center p-4 rounded transition-all duration-300">
+      <div className="w-full h-full relative">
+        <img
+          src={propertyDetails[0].image}
+          alt={propertyDetails[0].name}
+          className="w-full h-full object-center object-fill aspect-[4/5] rounded"
+        />
+        <div className="w-full lg:hidden lg:group-hover:flex justify-center items-center group-hover:absolute bg-[rgba(0,0,0,0.4)] inset-0 rounded">
+          <a href={`/${propertyDetails[0].name}`} target="_blank">
+            <button className="w-full lg:w-fit bg-[rgba(0,0,0,0.8)] text-white py-2 min-[425px]:py-3 sm:py-2 md:py-2 px-6 cursor-pointer uppercase">
+              View Details
+            </button>
+          </a>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center text-center w-full px-2 mt-1 pt-1.5 space-y-0 uppercase rounded tracking-wide">
+        <h1 className="text-sm font-semibold mb-0.5">{propertyDetails[0].name}</h1>
+        <p className="text-xs text-gray-400 helvectica">{propertyDetails[0].flats}</p>
+        <p className="text-xs text-gray-400 helvectica">{propertyDetails[0].locality}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
             </div>
 

@@ -10,6 +10,10 @@ import { IoClose } from "react-icons/io5";
 import Logo from '../assets/white-logo.png'
 import Building1 from '../assets/category-images/building-1.jpg'
 
+import VirParadise from '../assets/property-details/vir-enclave-day.jpg'
+import Krishna_Koyna from '../assets/property-details/krishna-koyna-day.jpg'
+import Global_Residency from '../assets/property-details/global-residency.jpeg'
+
 
 const Navbar = () => {
 
@@ -45,7 +49,7 @@ const Navbar = () => {
       categoryName: 'Under Construction',
       categoryTitle: 'Redevelopment Projects',
       items: [
-        { path: '/Vir Paradise', image: Building1, title: 'Vir Paradise', flats: '2 & 3 BHK Flats', location: 'Malad (W), Mumbai', },
+        { path: '/Vir Paradise', image: VirParadise, title: 'Vir Paradise', flats: '2 & 3 BHK Flats', location: 'Malad (W), Mumbai', },
         ],
       path: '/underconstruction-projects',
     },
@@ -56,8 +60,8 @@ const Navbar = () => {
       categoryName: 'Completed',
       categoryTitle: 'Redevelopment Projects',
       items: [
-        { path: '/Vir Krishna Koyna', image: Building1, title: 'VIR Krishna Koyna', flats: '1 & 2 BHK Flats', location: 'Borivali (W), Mumbai', },
-        { path: '/Global Residency', image: Building1, title: 'Global Residency', flats: '1 & 2 BHK Flats', location: 'Goregaon [E], Mumbai', },
+        { path: '/Vir Krishna Koyna', image: Krishna_Koyna, title: 'VIR Krishna Koyna', flats: '1 & 2 BHK Flats', location: 'Borivali (W), Mumbai', },
+        { path: '/Global Residency', image: Global_Residency, title: 'Global Residency', flats: '1 & 2 BHK Flats', location: 'Goregaon [E], Mumbai', },
       ],
       path: '/completed-projects',
     },
@@ -165,14 +169,14 @@ const Navbar = () => {
                                       target='_blank'
                                       className='group'
                                     >
-                                      <li className="flex items-center justify-start space-x-4 pb-2">
+                                      <li className="flex items-center justify-start space-x-0 pb-2">
                                         {/* Image */}
                                         <div className="flex-shrink-0">
                                           {item.image ? (
                                             <img
                                               src={item.image}
                                               alt={item.title}
-                                              className="w-24 h-16 object-fill bg-gray-300"
+                                              className="w-24 h-16 object-cover object-top bg-gray-300 rounded-xs"
                                             />
                                           ) : (
                                             <div className="w-24 h-16 bg-gray-200"></div>
@@ -180,7 +184,7 @@ const Navbar = () => {
                                         </div>
 
                                         {/* Title and Details */}
-                                        <div className="flex flex-col uppercase">
+                                        <div className="flex flex-col uppercase group-hover:bg-gray-100 px-4 py-1.5">
                                           <h4 className="text-sm text-gray-700 font-medium  group-hover:underline group-hover:text-[#1e5593] transition-all duration-150 ease-in-out">{item.title}</h4>
                                           <p className="text-xs text-gray-600 group-hover:text-gray-900 helvectica transition-all duration-150 ease-in-out ">{item.flats}</p>
                                           <p className="text-xs text-gray-500 group-hover:text-gray-900  helvectica transition-all duration-150 ease-in-out ">{item.location}</p>

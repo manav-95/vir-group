@@ -19,17 +19,6 @@ const ProjectDetails = () => {
         <>
             <div className='w-full'>
 
-                {/* HERO SECTION */}
-                <div className='w-full h-full min-[425px]:h-[650px] sm:h-[800px] lg:h-[800px] xl:h-[1000px] bg-[#333333] text-white'>
-                    <div className="h-full">
-                        <img
-                            src={content.image}
-                            alt='Hero image'
-                            className='w-full h-full object-cover min-[425px]:object-fill'
-                        />
-                    </div>
-                </div>
-
                 {/* DETAILS SECTION */}
                 <div className='w-full bg-[#26282a] text-white '>
                     <div className='max-w-7xl container mx-auto px-4 min-[425px]:px-8 py-10 sm:py-14'>
@@ -155,7 +144,16 @@ const ProjectDetails = () => {
                     </div>
                 </div>
 
-
+                {/* HERO SECTION */}
+                <div className='w-full h-full min-[425px]:h-[650px] sm:h-[800px] lg:h-[800px] xl:h-[1000px] bg-[#333333] text-white'>
+                    <div className="h-full">
+                        <img
+                            src={content.image}
+                            alt='Hero image'
+                            className='w-full h-full object-cover min-[425px]:object-fill'
+                        />
+                    </div>
+                </div>
 
             </div>
         </>
