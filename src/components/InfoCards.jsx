@@ -2,9 +2,9 @@ import React from 'react'
 
 const InfoCards = () => {
     const information = [
-        { count: '04', title: 'Completed', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
-        { count: '02', title: 'Under Construction', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
-        { count: '01', title: 'Upcoming', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
+        { count: '03', title: 'Completed', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
+        { count: '01', title: 'Under Construction', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
+        { count: '02', title: 'Upcoming', text: 'Redevelopment projects with combined total developable area of', sqft: '0.00 million sq.ft.', },
     ]
     return (
         <>

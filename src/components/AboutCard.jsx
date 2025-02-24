@@ -1,6 +1,7 @@
 import React from 'react';
 // import CardImage from '../assets/property-details/global-residency.jpeg'
 import CardImage from '../assets/about-card-images/card-image.jpg'
+import CardImage2 from '../assets/about-card-images/about-card-image-2.jpg'
 import { NavLink } from 'react-router-dom';
 
 const AboutCard = () => {
@@ -8,11 +9,11 @@ const AboutCard = () => {
         <>
             <div className="max-w-7xl container mx-auto px-6 lg:px-8 py-10 lg:py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 gap-x-10">
-                    {/* For Images */}
+                    {/* For Image */}
                     <div className="lg:col-span-6 hidden lg:flex ">
                         <div className="h-full w-full">
                             <img
-                                src={CardImage}
+                                src={CardImage2}
                                 alt="Building image"
                                 className="h-[400px] min-[425px]:h-[500px] sm:h-[650px] md:h-[700px] lg:h-full w-full object-cover aspect-square object-start rounded-sm shadow-md"
                             />

@@ -7,6 +7,7 @@ import BG from '../assets/bg.jpg';
 import FeaturedProjects from '../components/FeaturedProjects';
 
 import Map from '../assets/project-map.jpg'
+import Map2 from '../assets/new-map.png'
 import Testimonials from '../components/Testimonials';
 
 const Home = () => {
@@ -36,7 +37,7 @@ const Home = () => {
           <FeaturedProjects />
           <div className="overflow-x-auto sm:overflow-x-none w-full h-[400px] sm:h-[350px] md:h-[440px] lg:h-[600px]">
             <div className="w-max sm:w-full h-full">
-              <img src={Map} alt="project map" className="w-full h-full object-center object-cover" />
+              <img src={Map2} alt="project map" className="w-full h-full object-center object-cover" />
             </div>
           </div>
           <Testimonials />
