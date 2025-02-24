@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { NavLink } from 'react-router-dom'
 
@@ -13,6 +13,7 @@ import Building1 from '../assets/category-images/building-1.jpg'
 import VirParadise from '../assets/property-details/vir-enclave-day.jpg'
 import Krishna_Koyna from '../assets/property-details/krishna-koyna-day.jpg'
 import Global_Residency from '../assets/property-details/global-residency.jpeg'
+import Coming_Soon from '../assets/featured-projects/coming-soon.png'
 
 
 const Navbar = () => {
@@ -50,7 +51,7 @@ const Navbar = () => {
       categoryTitle: 'Redevelopment Projects',
       items: [
         { path: '/Vir Paradise', image: VirParadise, title: 'Vir Paradise', flats: '2 & 3 BHK Flats', location: 'Malad (W), Mumbai', },
-        ],
+      ],
       path: '/underconstruction-projects',
     },
 
@@ -71,14 +72,31 @@ const Navbar = () => {
       categoryName: 'Upcoming',
       categoryTitle: 'Redevelopment Projects',
       items: [
-        { path: '/Sheetal Suryaprakash', image: Building1, title: 'Sheetal Suryaprakash', flats: '1 & 2 BHK Flats', location: 'Vileparle (E), Mumbai', },
-        {  image: Building1, title: 'Vir Aradhana', flats: '1 & 2 BHK Flats', location: 'Malad (W), Mumbai', },
+        { path: '/Sheetal Suryaprakash', image: Global_Residency, title: 'Sheetal Suryaprakash', flats: '1 & 2 BHK Flats', location: 'Vileparle (E), Mumbai', },
+        { image: Coming_Soon, title: 'Vir Aradhana', flats: '1 & 2 BHK Flats', location: 'Malad (W), Mumbai', },
 
       ],
       path: '/upcoming-projects',
     },
 
   ]
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if the click was inside the menu, if not, close it
+      if (!event.target.closest(".large-screen-menu")) {
+        setIsLargeMenuOpen(false);
+      }
+    };
+
+    if (isLargeMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isLargeMenuOpen]);
 
   return (
     <>
@@ -229,26 +247,26 @@ const Navbar = () => {
           {/* MENU FOR LARGE SCREENS */}
           <div className='hidden lg:block'>
             <button
-            onClick={() => setIsLargeMenuOpen(true)} 
-             className='cursor-pointer'
-             >
-              <CgMenuRight className={`h-8 w-8 flex-shrink-0 ${isLargeMenuOpen ? 'text-[#202425]' : 'text-white'}`} /> 
+              onClick={() => setIsLargeMenuOpen(true)}
+              className='cursor-pointer'
+            >
+              <CgMenuRight className={`h-8 w-8 flex-shrink-0 ${isLargeMenuOpen ? 'text-[#202425]' : 'text-white'}`} />
             </button>
           </div>
 
-         
+
 
           {/* Sliding Menu Panel */}
           <div
-            className={`fixed top-0 right-0 h-full w-72 text-white bg-[rgba(0,0,0,0.7)] shadow-lg z-50 transform transition-transform duration-300 ${isLargeMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            className={`large-screen-menu fixed top-0 right-0 h-full w-72 text-white bg-[rgba(0,0,0,0.7)] shadow-lg z-50 transform transition-transform duration-300 ${isLargeMenuOpen ? 'translate-x-0' : 'translate-x-full'
               }`}
           >
             {/* Close Button */}
             <div className="absolute top-4 left-0 ">
               <button
-               onClick={() => setIsLargeMenuOpen(false)}
-               className='cursor-pointer py-2 px-2'
-               >
+                onClick={() => setIsLargeMenuOpen(false)}
+                className='cursor-pointer py-2 px-2'
+              >
                 <IoClose className="h-8 w-8" />
               </button>
             </div>
@@ -259,10 +277,10 @@ const Navbar = () => {
                 <NavLink
                   key={index}
                   to={item.path}
-                  className={({isActive}) =>
-                  isActive 
-                  ? 'text-base text-[#00d8ff] helvectica tracking-wider'
-                  : 'text-base helvectica  tracking-wider text-[#999999] hover:text-white transition-all'
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'text-base text-[#00d8ff] helvectica tracking-wider'
+                      : 'text-base helvectica  tracking-wider text-[#999999] hover:text-white transition-all'
                   }
                   onClick={() => setIsLargeMenuOpen(false)}
                 >
